@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.1_c78f9093f6496ab8d05560a78a0cf4f4dc2a405a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_92a8c7f28b5ade0e4b9f5791aaf66863d93e63b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/6.1.0/63735f48b82bcd24cdd33821342428252eb1ca5a/butterknife-6.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-6.1.0_ec97314ad91543b1e940bd3d348c79e92c8bf830/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_78d504c230f681eb3611f4dfc91af8b7feec39c7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_8c4ab1b45bec97f5ec5cb267cff738687e7da8d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_3a935df430282f90387c1b7ec134684b8e216979/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="134749dac0c033e73af5055511bb7afdbdb601c4">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a4878546f4bc597693d057a604397c01093e5b13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_55466ed7a2beefe91ef7eb05095c7435e50d6db0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3375f8a613f7cda7c767eb7dba30e2bd77be395f">
+        <dex dex="/Users/malcomjonesjr/dev/android/StudyTime/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_8c27a71d390ac682e765c324bad635e3f469f47a/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">StudyTime</string>
+    <string name="welcome">Welcome\n to\n Study Time</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="submit">Submit</string>
+    <string name="create">Create Account</string>
+    <string name="continue_no_account">Continue without an Account</string>
+    <string name="first_hint">First Name</string>
+    <string name="last_hint">Last Name</string>
+    <string name="enter_email_hint">Email Address</string>
+    <string name="enter_pass_hint">Password</string>
+    <string name="enter_password_hint">Password</string>
+    <string name="enter_phone_hint">Phone Number</string>
+    <string name="group_name_hint">Group Name</string>
+    <string name="location_hint">Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

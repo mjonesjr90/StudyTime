@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- Default -->
+    <color name="turqoise">#44B3C2</color>
+    <color name="dark_turqoise">#2E818C</color>
+    <color name="orange">#F1A94E</color>
+    <color name="red">#E45641</color>
+    <color name="brown">#5D4C46</color>
+    <color name="dark_gray">#7B8D8E</color>
+    <color name="off_white">#F2EDD8</color>
+    <color name="dark_off_white">#d9d5c2</color>
+    <!-- CNU Colors -->
+    <color name="gray">#D3D3D3</color>
+    <color name="royal">#4169E1</color>
+    <color name="white">#fff</color>
+</resources>
