@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/pad_marg_medium"
-    android:background="@color/dark_off_white"
+    android:background="@color/off_white"
     tools:context="com.techexblog.studytime.NewGroupActivity">
 
     <android.support.design.widget.TextInputLayout
@@ -20,6 +20,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/group_name_hint"
+            android:inputType="textCapSentences"
+            android:layout_marginTop="5dp"
+            android:padding="@dimen/pad_marg_small"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/topicWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/input_group_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/topic_hint"
             android:inputType="textCapSentences"
             android:layout_marginTop="5dp"
             android:padding="@dimen/pad_marg_small"/>
@@ -45,7 +61,7 @@
         android:id="@+id/create_group_submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create"
+        android:text="@string/create_group"
         android:textSize="@dimen/font_size_medium"
         android:padding="@dimen/pad_marg_small"
         android:layout_marginTop="@dimen/pad_marg_small"

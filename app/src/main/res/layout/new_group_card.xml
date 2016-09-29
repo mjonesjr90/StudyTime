@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="@dimen/pad_marg_small"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="@dimen/pad_marg_xsmall">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+                <TextView
+                    android:id="@+id/group_n1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Group Name"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/brown"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:id="@+id/topic_n1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Topic"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/brown"
+                    android:textAllCaps="true"
+                    android:paddingTop="@dimen/pad_marg_medium"/>
+                <TextView
+                    android:id="@+id/date_n1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/brown"
+                    android:textAllCaps="true"
+                    android:paddingTop="@dimen/pad_marg_medium"/>
+            </LinearLayout>
+            <ImageView
+                android:src="@drawable/cnu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:contentDescription="cnu campus"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

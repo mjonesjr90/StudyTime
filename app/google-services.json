@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "713881302573",
+    "firebase_url": "https://studytime-19bac.firebaseio.com",
+    "project_id": "studytime-19bac",
+    "storage_bucket": "studytime-19bac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713881302573:android:7fe758736a8d4f5d",
+        "android_client_info": {
+          "package_name": "com.techexblog.studytime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713881302573-ilcs53rml8detvpo6uqdb6npfk0gjion.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVsyJJ6s3pBHXcybwVzcQ18CjqKQoutM4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
