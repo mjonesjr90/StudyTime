@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">StudyTime</string>
 
+    <!-- Menu Items -->
+    <string name="sign_out">Sign Out</string>
+    <string name="invite_menu_label">Invite</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+
     <!-- EditText Hints -->
     <string name="first_hint">First Name</string>
     <string name="last_hint">Last Name</string>
@@ -20,7 +26,22 @@
 
     <!-- Labels -->
     <string name="welcome">Welcome\n to\n Study Time</string>
-    <string name="most_recent">Most Recent Groups</string>
+    <string name="most_recent">Most Recent Group</string>
+    <string name="upcoming">Upcoming Groups</string>
     <string name="no_account">No account yet? Create one!</string>
     <string name="continue_no_account">Continue without an account</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>

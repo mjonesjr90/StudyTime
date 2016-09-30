@@ -1,7 +1,9 @@
 package com.techexblog.studytime;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Random;
 
 import butterknife.ButterKnife;
@@ -17,6 +25,10 @@ import butterknife.InjectView;
 
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
+
+    //Firebase Instance Variables
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @InjectView(R.id.input_first) EditText _firstNameText;
     @InjectView(R.id.input_last) EditText _lastNameText;
@@ -33,6 +45,22 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         ButterKnife.inject(this);
 
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user != null){
+                    //User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                }
+                else{
+                    //User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+            }
+        };
+
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +75,20 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        if(mAuthListener != null){
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 
     private static String randomLoadingMessage() {
@@ -80,7 +122,22 @@ public class SignupActivity extends AppCompatActivity {
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        //TODO:Implement Signup Logic
+        //Firebase Signup Logic
+        mAuth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>(){
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task){
+                    Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+                    //Once the user is created, it will sign into the app
+                    //If it fails, a message will be displayed
+                    if(!task.isSuccessful()){
+                        Log.w(TAG, "signInWithEmail:failed", task.getException());
+                        onSignupFailed();
+                    }
+                }
+
+        });
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -96,11 +153,11 @@ public class SignupActivity extends AppCompatActivity {
     private void onSignupSuccess() {
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
-        finish();
+        startActivity(new Intent(this, HomeActivity.class));
     }
 
     private void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Oops! Signup failed.", Toast.LENGTH_LONG).show();
         _signupButton.setEnabled(true);
     }
 

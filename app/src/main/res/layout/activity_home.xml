@@ -8,7 +8,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/off_white"
+    android:fitsSystemWindows="true"
     tools:context="com.techexblog.studytime.HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/dark_turqoise"
+        android:titleTextColor="@color/white"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/home_layout"
@@ -16,9 +30,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
+        android:paddingLeft="@dimen/pad_marg_medium"
+        android:paddingRight="@dimen/pad_marg_medium"
         android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/upcoming_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming"
+            android:textSize="@dimen/font_size_xlarge"
+            android:textColor="@color/brown"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:paddingTop="@dimen/pad_marg_medium"
+            android:paddingBottom="@dimen/pad_marg_small"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/upcoming_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
 
         <TextView
             android:id="@+id/most_recent_label"
@@ -27,13 +60,16 @@
             android:text="@string/most_recent"
             android:textSize="@dimen/font_size_xlarge"
             android:textColor="@color/brown"
-            android:textAllCaps="true"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:paddingTop="@dimen/pad_marg_small"
             android:paddingBottom="@dimen/pad_marg_small"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/group_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="vertical"/>
     </LinearLayout>
 
