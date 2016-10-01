@@ -3,14 +3,28 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- App Bar -->
-        <item name="colorPrimary">@color/turqoise</item>
+        <item name="colorPrimary">@color/royal</item>
         <!--Status Bar and Contextual Bars -->
-        <item name="colorPrimaryDark">@color/dark_turqoise</item>
+        <item name="colorPrimaryDark">@color/dark_royal</item>
         <!-- Theme UI Controls -->
-        <item name="colorAccent">@color/turqoise</item>
-        <item name="colorControlActivated">@color/dark_turqoise</item>
-        <item name="colorControlHighlight">@color/dark_turqoise</item>
-        <item name="android:navigationBarColor">@color/dark_turqoise</item>
+        <item name="colorAccent">@color/royal</item>
+        <item name="colorControlActivated">@color/dark_royal</item>
+        <item name="colorControlHighlight">@color/dark_royal</item>
+        <item name="android:navigationBarColor">@color/dark_royal</item>
+    </style>
+
+    <!-- CNU application theme. -->
+    <style name="CNUAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- App Bar -->
+        <item name="colorPrimary">@color/royal</item>
+        <!--Status Bar and Contextual Bars -->
+        <item name="colorPrimaryDark">@color/dark_royal</item>
+        <!-- Theme UI Controls -->
+        <item name="colorAccent">@color/royal</item>
+        <item name="colorControlActivated">@color/dark_royal</item>
+        <item name="colorControlHighlight">@color/dark_royal</item>
+        <item name="android:navigationBarColor">@color/dark_royal</item>
+        <item name="android:windowBackground">@color/gray</item>
     </style>
 
     <!-- Splash screen theme -->
@@ -25,11 +39,11 @@
         <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
         <item name="actionMenuTextColor">@android:color/white</item>
         <!-- Tints the input fields like checkboxes and text fields -->
-        <item name="colorAccent">@color/turqoise</item>
+        <item name="colorAccent">@color/royal</item>
         <!-- Applies to views in their normal state. -->
         <item name="colorControlNormal">@color/white</item>
         <!-- Applies to views in their activated state (i.e checked or switches) -->
-        <item name="colorControlActivated">@color/dark_turqoise</item>
+        <item name="colorControlActivated">@color/dark_royal</item>
         <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
         <item name="colorControlHighlight">@color/red</item>
 
@@ -49,8 +63,8 @@
     <!-- Style for Dialog Box -->
     <style name="AppTheme_Dark_Dialog" parent="Theme.AppCompat.Dialog">
         <item name="colorAccent">@color/white</item>
-        <item name="android:textColorPrimary">@color/turqoise</item>
-        <item name="android:background">@color/dark_turqoise</item>
+        <item name="android:textColorPrimary">@color/royal</item>
+        <item name="android:background">@color/dark_royal</item>
         <item name="android:textSize">@dimen/font_size_medium</item>
     </style>
 </resources>

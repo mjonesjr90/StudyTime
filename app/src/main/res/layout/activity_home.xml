@@ -7,7 +7,6 @@
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
     android:fitsSystemWindows="true"
     tools:context="com.techexblog.studytime.HomeActivity">
 
@@ -16,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/dark_turqoise"
+        android:background="@color/dark_royal"
         android:titleTextColor="@color/white"
         android:elevation="4dp"
         android:theme="@style/ToolbarTheme"
@@ -30,8 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/pad_marg_medium"
-        android:paddingRight="@dimen/pad_marg_medium"
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <TextView
@@ -40,17 +37,18 @@
             android:layout_height="wrap_content"
             android:text="@string/upcoming"
             android:textSize="@dimen/font_size_xlarge"
-            android:textColor="@color/brown"
+            android:textColor="@color/dark_royal"
             android:textAllCaps="false"
             android:textStyle="italic"
             android:typeface="serif"
-            android:paddingTop="@dimen/pad_marg_medium"
-            android:paddingBottom="@dimen/pad_marg_small"/>
+            android:padding="@dimen/pad_marg_medium"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/upcoming_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:scrollbars="vertical"/>
 
         <TextView
@@ -59,17 +57,18 @@
             android:layout_height="wrap_content"
             android:text="@string/most_recent"
             android:textSize="@dimen/font_size_xlarge"
-            android:textColor="@color/brown"
+            android:textColor="@color/dark_royal"
             android:textAllCaps="false"
             android:textStyle="italic"
             android:typeface="serif"
-            android:paddingTop="@dimen/pad_marg_small"
-            android:paddingBottom="@dimen/pad_marg_small"/>
+            android:padding="@dimen/pad_marg_medium"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/group_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:scrollbars="vertical"/>
     </LinearLayout>
 
@@ -86,4 +85,18 @@
         android:tint="@color/white"
         app:backgroundTint="@color/red"
         android:onClick="createNewGroup"/>
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/pad_marg_medium"
+        android:textSize="@dimen/font_size_large"
+        android:textColor="@color/dark_gray"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        android:typeface="serif"
+        app:layout_anchor="@id/home_layout"
+        app:layout_anchorGravity="bottom|left|end"/>
 </android.support.design.widget.CoordinatorLayout>

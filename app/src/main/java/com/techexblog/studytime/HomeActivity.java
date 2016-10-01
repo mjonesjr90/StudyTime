@@ -14,7 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -34,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     private String mUsername;
     private String mPhotoUrl;
     private SharedPreferences mSharedPreferences;
+    private ImageView imageView;
 
     private Button mSendButton;
     private RecyclerView mMessageRecyclerView;
@@ -65,6 +68,9 @@ public class HomeActivity extends AppCompatActivity {
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mUsername = ANONYMOUS;
+
+        //Make dialog popup on image click
+        imageView = (ImageView)findViewById(R.id.location_picture);
 
         //Setup app bar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -105,12 +111,36 @@ public class HomeActivity extends AppCompatActivity {
         mAdapter = new MyRecyclerViewAdapter(getDataSet(numRecent));
         mRecyclerView.setAdapter(mAdapter);
 
+        //Display user name
+        if(mFirebaseUser.getDisplayName() != "" || mFirebaseUser.getDisplayName() != null){
+            String[] fullName = mFirebaseUser.getDisplayName().split(" ");
+            TextView welcome = (TextView) findViewById(R.id.welcome_message);
+            welcome.setText("Hello, " + fullName[0] + "!");
+        }
+
         // Code to Add an item with default animation
         //((MyRecyclerViewAdapter) mAdapter).addItem(obj, index);
 
         // Code to remove an item with default animation
         //((MyRecyclerViewAdapter) mAdapter).deleteItem(index);
     }
+
+    /*public void imagePopuo(View view){
+        Dialog settingsDialog = new Dialog(HomeActivity.this);
+
+        LayoutInflater inflater = getLayoutInflater();
+        View newView = (View) inflater.inflate(R.layout.activity_home, null);
+
+        settingsDialog.setContentView(newView);
+        settingsDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+        ImageView iv= (ImageView) newView.findViewById(R.id.location_picture);
+        Bitmap bm=((BitmapDrawable)imageView.getDrawable()).getBitmap();
+        iv.setImageBitmap(bm);
+
+
+        settingsDialog.show();
+    }*/
 
     @Override
     protected  void onResume(){
@@ -139,10 +169,14 @@ public class HomeActivity extends AppCompatActivity {
                 mUsername = ANONYMOUS;
                 startActivity(new Intent(this, LoginActivity.class));
                 return true;
-            case R.id.settings_menu:
-                Log.i(TAG, "Refresh menu item selected");;
+            case R.id.refresh_menu:
+                Log.i(TAG, "Refresh menu item selected");
                 mAdapter.notifyDataSetChanged();
                 uAdapter.notifyDataSetChanged();
+                return true;
+            case R.id.edit_profile_menu:
+                Log.i(TAG, "Edit profile menu item selected");
+                startActivity(new Intent(this, EditProfileActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }

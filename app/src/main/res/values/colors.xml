@@ -13,7 +13,9 @@
     <color name="off_white">#F2EDD8</color>
     <color name="dark_off_white">#d9d5c2</color>
     <!-- CNU Colors -->
-    <color name="gray">#D3D3D3</color>
+    <color name="gray">#f1f1f1</color>
     <color name="royal">#4169E1</color>
+    <color name="dark_royal">#273f87</color>
     <color name="white">#fff</color>
+    <color name="black">#000</color>
 </resources>

@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     @InjectView(R.id.btn_login) Button _loginButton;
     @InjectView(R.id.btn_google_login) com.google.android.gms.common.SignInButton _googleLoginButton;
     @InjectView(R.id.link_signup) TextView _signupLink;
-    @InjectView(R.id.link_continue) TextView _continueLink;
+    //@InjectView(R.id.link_continue) TextView _continueLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,13 +78,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        _continueLink.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent continueIntent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(continueIntent);
-            }
-        });
+//        _continueLink.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                Intent continueIntent = new Intent(getApplicationContext(), HomeActivity.class);
+//                startActivity(continueIntent);
+//            }
+//        });
     }
 
     @Override

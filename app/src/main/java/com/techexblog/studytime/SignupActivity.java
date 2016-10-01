@@ -165,13 +165,13 @@ public class SignupActivity extends AppCompatActivity {
     private boolean validate(){
         boolean valid = true;
 
-        String firsName = _firstNameText.getText().toString();
+        String firstName = _firstNameText.getText().toString();
         String lastName = _lastNameText.getText().toString();
         String phone = _phoneText.getText().toString();
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        if (firsName.isEmpty()) {
+        if (firstName.isEmpty()) {
             _firstNameText.setError("must enter a first name");
             valid = false;
         } else {

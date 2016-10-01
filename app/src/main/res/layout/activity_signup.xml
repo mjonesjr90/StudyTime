@@ -7,8 +7,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/off_white">
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <!-- Logo will go here -->
     <ImageView
@@ -119,10 +118,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/pad_marg_medium"
-        android:layout_marginBottom="@dimen/pad_marg_medium"
         android:text="Already have an account? Login!"
         android:textSize="@dimen/font_size_medium"
-        android:textColor="@color/turqoise"
+        android:textColor="@color/black"
         android:gravity="center"/>
 
 </LinearLayout>

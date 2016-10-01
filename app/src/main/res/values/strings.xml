@@ -23,6 +23,7 @@
     <string name="submit">Submit</string>
     <string name="create_group">Create Group</string>
     <string name="create">Create Account</string>
+    <string name="update">Update Account</string>
 
     <!-- Labels -->
     <string name="welcome">Welcome\n to\n Study Time</string>
