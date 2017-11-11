@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Random;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
@@ -30,20 +30,20 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    @InjectView(R.id.input_first) EditText _firstNameText;
-    @InjectView(R.id.input_last) EditText _lastNameText;
-    @InjectView(R.id.input_phone) EditText _phoneText;
-    @InjectView(R.id.input_email) EditText _emailText;
-    @InjectView(R.id.input_password) EditText _passwordText;
-    @InjectView(R.id.btn_create_account) Button _signupButton;
-    @InjectView(R.id.link_login) TextView _loginLink;
+    @BindView(R.id.input_first) EditText _firstNameText;
+    @BindView(R.id.input_last) EditText _lastNameText;
+    @BindView(R.id.input_phone) EditText _phoneText;
+    @BindView(R.id.input_email) EditText _emailText;
+    @BindView(R.id.input_password) EditText _passwordText;
+    @BindView(R.id.btn_create_account) Button _signupButton;
+    @BindView(R.id.link_login) TextView _loginLink;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {

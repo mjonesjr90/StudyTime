@@ -21,7 +21,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import java.util.Random;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class EditProfileActivity extends AppCompatActivity {
     private static final String TAG = "EditProfileActivity";
@@ -29,19 +29,19 @@ public class EditProfileActivity extends AppCompatActivity {
     //Firebase Instance Variables
 
     //EditText Views
-    @InjectView(R.id.input_first) EditText _first;
-    @InjectView(R.id.input_last) EditText _last;
+    @BindView(R.id.input_first) EditText _first;
+    @BindView(R.id.input_last) EditText _last;
     //@InjectView(R.id.input_phone) EditText _phone;
-    @InjectView(R.id.input_email) EditText _email;
+    @BindView(R.id.input_email) EditText _email;
     //@InjectView(R.id.input_password) EditText _password;
-    @InjectView(R.id.btn_update_account) Button _update;
+    @BindView(R.id.btn_update_account) Button _update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
         Log.i(TAG, "injecting");
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {

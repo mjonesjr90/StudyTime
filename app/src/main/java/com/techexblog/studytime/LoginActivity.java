@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Random;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "StudyTime";
@@ -33,18 +33,18 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     //Initialize views
-    @InjectView(R.id.login_email) EditText _emailText;
-    @InjectView(R.id.login_password) EditText _passwordText;
-    @InjectView(R.id.btn_login) Button _loginButton;
-    @InjectView(R.id.btn_google_login) com.google.android.gms.common.SignInButton _googleLoginButton;
-    @InjectView(R.id.link_signup) TextView _signupLink;
+    @BindView(R.id.login_email) EditText _emailText;
+    @BindView(R.id.login_password) EditText _passwordText;
+    @BindView(R.id.btn_login) Button _loginButton;
+    @BindView(R.id.btn_google_login) com.google.android.gms.common.SignInButton _googleLoginButton;
+    @BindView(R.id.link_signup) TextView _signupLink;
     //@InjectView(R.id.link_continue) TextView _continueLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance(); //Initialize Firebase Auth
         mAuthListener = new FirebaseAuth.AuthStateListener() {
