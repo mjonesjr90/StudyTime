@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "StudyTime";
     private static final int REQUEST_SIGNUP = 0;
 
     //Firebase Instance Variables
@@ -111,6 +111,16 @@ public class LoginActivity extends AppCompatActivity {
         return messages[ran];
     }
 
+    private static String randomWrongMessage() {
+        String[] messages = {"The required gigapixels weren't located. Try Again!",
+                "The hamster fell off the wheel. Try Again!",
+                "Ran out of coal for the stove. Try Again!",
+                "The Flux Capacitor needs trash, Try Again!"};
+        Random r = new Random();
+        int ran = r.nextInt(3);
+        return messages[ran];
+    }
+
     public void login(){
         Log.d(TAG, "Login");
 
@@ -168,7 +178,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed(){
-        Toast.makeText(getBaseContext(), "The hamster is lost. Try Again!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Well, that didn't work out. Try Again!", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getBaseContext(), randomWrongMessage(), Toast.LENGTH_LONG).show();
         _loginButton.setEnabled(true);
     }
 

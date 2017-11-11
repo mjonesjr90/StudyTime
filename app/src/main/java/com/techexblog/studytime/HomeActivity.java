@@ -186,8 +186,8 @@ public class HomeActivity extends AppCompatActivity {
     private ArrayList<GroupDataObject> getDataSet(int num) {
         ArrayList results = new ArrayList<GroupDataObject>();
         for (int index = 0; index < num; index++) {
-            GroupDataObject obj = new GroupDataObject("Group Name" + index,
-                    "Topic" + index, "Date");
+            GroupDataObject obj = new GroupDataObject("Group Name " + index,
+                    "Topic " + index, "Date");
             results.add(index, obj);
         }
         return results;

@@ -39,8 +39,7 @@
             android:textSize="@dimen/font_size_xlarge"
             android:textColor="@color/dark_royal"
             android:textAllCaps="false"
-            android:textStyle="italic"
-            android:typeface="serif"
+            android:typeface="sans"
             android:padding="@dimen/pad_marg_medium"/>
 
         <android.support.v7.widget.RecyclerView
@@ -59,8 +58,7 @@
             android:textSize="@dimen/font_size_xlarge"
             android:textColor="@color/dark_royal"
             android:textAllCaps="false"
-            android:textStyle="italic"
-            android:typeface="serif"
+            android:typeface="sans"
             android:padding="@dimen/pad_marg_medium"/>
 
         <android.support.v7.widget.RecyclerView

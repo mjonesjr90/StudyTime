@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "713881302573-dv21r5puvbtaipqmhu78rphjcl68hv2d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techexblog.studytime",
+            "certificate_hash": "e23e31de4aca3c7737d2c2374536446a40b48569"
+          }
+        },
+        {
+          "client_id": "713881302573-r602q7j1tfrk87875t7d8kfoo471enpj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techexblog.studytime",
+            "certificate_hash": "39939728bcb4e98f2bdd0f0caf9561ae17ca7691"
+          }
+        },
+        {
           "client_id": "713881302573-ilcs53rml8detvpo6uqdb6npfk0gjion.apps.googleusercontent.com",
           "client_type": 3
         }
